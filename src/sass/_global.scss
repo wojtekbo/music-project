@@ -1,13 +1,34 @@
 body {
   background-color: $color-dark;
 }
-section {
-  margin: 150px 0;
+
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
 }
+
+section {
+  margin-top: 70px;
+}
+
 .container {
   width: 1400px;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.green-audio-player .slider .gap-progress .pin {
+  background-color: $color-detail;
 }
 
 a {
@@ -24,6 +45,7 @@ a {
   color: $color-detail;
 }
 
+// HERO
 .hero {
   height: 140vh;
   background-image: url(../images/background.jpg);
@@ -41,11 +63,11 @@ a {
     flex-direction: column;
     padding: 5%;
 
-    .h1--hero {
+    h1 {
       margin: 0 -56px 0 56px;
     }
 
-    .h2--hero {
+    h2 {
       margin-top: 5px;
       line-height: 72px;
     }
@@ -71,6 +93,35 @@ a {
   }
 }
 
+//SONG
+.music .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.song {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .song__params {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .category {
+      margin-left: 5px;
+    }
+    .category::after {
+      content: ',';
+    }
+    .category:last-of-type::after {
+      content: '';
+    }
+  }
+}
+
+// NAVIGATION
 nav {
   display: flex;
   height: 60px;
@@ -83,67 +134,27 @@ nav {
     flex-direction: row;
     justify-content: space-around;
   }
+  .active {
+    text-decoration: underline;
+  }
 }
 
-.subscribe {
-  height: 1020px;
-  width: 100%;
-  position: relative;
-  flex-direction: row;
-  justify-content: center;
+//FOOTER
+footer {
   display: flex;
-  background-image: url(../images/subscribe.jpg);
-  background-size: cover;
-  background-position: center center;
-  .subscribe__now {
-    position: absolute;
-    top: -60px;
-    left: 49.2%;
-    margin-right: -50%;
-    transform: translate(-50%, 0);
+  justify-content: center;
+  p {
+    padding: 10px 10px;
+    text-align: center;
+    color: $color-light;
   }
+}
 
-  .subscribe__img {
-    position: absolute;
-    width: 465px;
-    height: 578px;
-    right: 81px;
-    top: 167px;
-    background-image: url(../images/artist.jpg);
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .subscribe__btn {
-    position: absolute;
-    top: 520px;
-    left: 118px;
-    background-color: $color-detail;
-    border-radius: 10px;
-    box-shadow: 0 0 118px 24px rgba(0, 0, 0, 0.11);
-    padding: 43px 33px;
-    h5 {
-      margin-left: 3px;
-    }
-  }
-
-  .subscribe__name {
-    position: absolute;
-    top: 434px;
-    right: 544px;
-  }
-
-  .subscribe__last-name {
-    position: absolute;
-    top: 541px;
-    right: 313px;
-  }
-
-  .subscribe__album {
-    position: absolute;
-    bottom: 130px;
-    right: 44px;
-    text-align: right;
-    line-height: 54.2px;
+// MEDIA
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 1000px;
+    height: 100%;
+    position: relative;
   }
 }

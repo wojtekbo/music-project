@@ -1,0 +1,124 @@
+.subscribe {
+  height: 1020px;
+  width: 100%;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  background-position: center center;
+  .subscribe__now {
+    position: absolute;
+    top: -60px;
+    left: 49.2%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+  }
+
+  .subscribe__img {
+    position: absolute;
+    width: 465px;
+    height: 578px;
+    right: 81px;
+    top: 167px;
+    background-image: url(../images/artist.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .subscribe__btn {
+    position: absolute;
+    top: 520px;
+    left: 118px;
+    background-color: $color-detail;
+    border-radius: 10px;
+    box-shadow: 0 0 118px 24px rgba(0, 0, 0, 0.11);
+    padding: 43px 33px;
+    h5 {
+      margin-left: 3px;
+    }
+  }
+
+  .subscribe__name {
+    position: absolute;
+    top: 434px;
+    right: 544px;
+  }
+
+  .subscribe__last-name {
+    position: absolute;
+    top: 541px;
+    right: 313px;
+  }
+
+  .subscribe__album {
+    position: absolute;
+    bottom: 130px;
+    right: 44px;
+    text-align: right;
+    line-height: 54.2px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .subscribe {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    background-position: center center;
+    .subscribe__now {
+      position: absolute;
+      top: -36px;
+      left: 49.2%;
+      margin-right: -50%;
+      transform: translate(-50%, 0);
+    }
+
+    .subscribe__img {
+      position: absolute;
+      width: 325px;
+      height: 404px;
+      right: 81px;
+      top: 137px;
+      background-image: url(../images/artist.jpg);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .subscribe__btn {
+      position: absolute;
+      top: 373px;
+      left: 118px;
+      background-color: $color-detail;
+      border-radius: 10px;
+      box-shadow: 0 0 118px 24px rgba(0, 0, 0, 0.11);
+      padding: 27px 21px;
+      h5 {
+        margin-left: 3px;
+      }
+    }
+
+    .subscribe__name {
+      position: absolute;
+      top: 314px;
+      right: 396px;
+    }
+
+    .subscribe__last-name {
+      position: absolute;
+      top: 370px;
+      right: 240px;
+    }
+
+    .subscribe__album {
+      bottom: 150px;
+      right: 44px;
+      line-height: 36px;
+    }
+  }
+}
