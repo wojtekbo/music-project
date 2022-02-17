@@ -46,7 +46,7 @@ const app = {
     const source = document.querySelector(select.templateOf.searchForm).innerHTML;
     const compiledSource = Handlebars.compile(source);
     const compiledWithData = compiledSource(thisApp.songsCategories);
-    document.querySelector(select.pages.search.form.container).innerHTML = compiledWithData;
+    document.querySelector(select.pages.search.form.wrapper).innerHTML = compiledWithData;
   },
 
   initNav: function () {

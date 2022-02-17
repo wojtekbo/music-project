@@ -54,7 +54,7 @@
         <div class="container">
           <div class="page-wrapper">
             <h5 class="uppercase">Search</h5>
-            <form id="search-form"></form>
+            <div class="search-wrapper"></div>
             <div class="search-result"></div>
           </div>
           <section class="music">
@@ -101,16 +101,18 @@
     </script>
 
     <script id="template-search-form" type="text/x-handlebars-template">
-      <label for='search-form__title'><p>Name</p></label>
-      <input id='search-form__title' type='text' />
-      <label for='search-form__category'><p>Category</p></label>
-      <select id='search-form__category'>
-        <option value='empty'></option>
-        {{#each this}}
-          <option value='{{this}}'>{{this}}</option>
-        {{/each}}
-      </select>
-      <button id='search-form__button' type='submit'>Search</button>
+      <form id='search-form'>
+        <label for='search-form__title'><p>Name</p></label>
+        <input id='search-form__title' type='text' />
+        <label for='search-form__category'><p>Category</p></label>
+        <select id='search-form__category'>
+          <option value='empty'></option>
+          {{#each this}}
+            <option value='{{this}}'>{{this}}</option>
+          {{/each}}
+        </select>
+        <button id='search-form__button' type='submit'>Search</button>
+      </form>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
