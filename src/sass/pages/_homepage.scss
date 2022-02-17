@@ -161,10 +161,6 @@
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 999px) {
-  body {
-    background-color: rgb(226, 43, 43);
-  }
-
   .subscribe {
     height: 700px;
     width: 100%;

@@ -152,9 +152,23 @@ nav {
     flex-direction: row;
     justify-content: space-around;
   }
+  a {
+    transition: all 0.1s ease-out;
+  }
+  a:hover {
+    // font-weight: 600;
+    color: $color-gray;
+    transform: translate(0, -2px);
+    transform-origin: center center;
+  }
+  a:active {
+    transform: scale(1.1) translate(0, -3px);
+    transform-origin: center center;
+  }
 
   .active {
-    text-decoration: underline;
+    font-weight: 600;
+    color: $color-gray;
   }
 }
 

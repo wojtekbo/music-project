@@ -100,6 +100,10 @@ const app = {
   initDiscover() {
     const thisApp = this;
     thisApp.randerSongsList(thisApp.randomSong(), select.pages.discover.musicContainer);
+    document.querySelector('#show-random').addEventListener('click', (e) => {
+      e.preventDefault();
+      thisApp.randerSongsList(thisApp.randomSong(), select.pages.discover.musicContainer);
+    });
   },
 
   activatePage: function (pageId) {
