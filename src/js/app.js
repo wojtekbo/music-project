@@ -87,11 +87,12 @@ const app = {
     document.querySelector(select.pages.search.form.submit).addEventListener('click', (e) => {
       e.preventDefault();
       const inputValue = document.querySelector(select.pages.search.form.title).value;
-      thisApp.randerSongsList(thisApp.searchSong(inputValue), select.pages.search.musicContainer);
-      if (!thisApp.searchSong(inputValue)) {
+      const category = document.querySelector(select.pages.search.form.category).value;
+      thisApp.randerSongsList(thisApp.searchSong(inputValue, category), select.pages.search.musicContainer);
+      if (!thisApp.searchSong(inputValue, category)) {
         thisApp.dom.searchResult.innerHTML = 'No results :(';
       } else {
-        thisApp.dom.searchResult.innerHTML = 'We have found ' + thisApp.searchSong(inputValue).length + ' songs...';
+        thisApp.dom.searchResult.innerHTML = 'We have found ' + thisApp.searchSong(inputValue, category).length + ' songs...';
       }
     });
   },
@@ -126,17 +127,22 @@ const app = {
     return randomSong;
   },
 
-  searchSong: function (searchInput) {
+  searchSong: function (searchInput, category) {
     const thisApp = this;
     const searchQuery = searchInput;
     const searchResult = thisApp.data.songs.filter((song) => {
-      return song.title.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase());
+      if (category !== 'empty') {
+        return song.title.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase()) && song.categories.includes(category);
+      } else {
+        return song.title.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase());
+      }
     });
     return searchResult;
   },
 
   initMusicPlayer: function (selector) {
     const thisApp = this;
+    // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
       selector: selector + ' .song__player',
       stopOthersOnPlay: true,

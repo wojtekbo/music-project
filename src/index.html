@@ -22,58 +22,63 @@
     </header>
 
     <nav>
-      <div class="container">
-        <div class="nav__wrapper">
-          <a href="#homepage">Home</a>
-          <a href="#search">Search</a>
-          <a href="#discover">Discover</a>
-        </div>
+      <div class="nav__wrapper">
+        <a href="#homepage">Home</a>
+        <a href="#search">Search</a>
+        <a href="#discover">Discover</a>
       </div>
     </nav>
 
     <div id="pages">
       <section id="homepage">
-        <section class="music">
-          <div class="container"></div>
-        </section>
-
-        <section class="subscribe">
-          <div class="container">
-            <div class="subscribe__img"></div>
-            <h3 class="subscribe__now">Subscribe now</h3>
-            <div class="subscribe__btn"><h5 class="h5--upper">Join Now</h5></div>
-            <h4 class="subscribe__name">Dean</h4>
-            <h4 class="subscribe__last-name">Hen<span class="colored__red">son</span></h4>
-            <h5 class="subscribe__album"><span class="uppercase">New Album</span><br />Available only for subscribers</h5>
+        <div class="container">
+          <div class="page-wrapper">
+            <section class="music">
+              <div class="container"></div>
+            </section>
           </div>
-        </section>
+          <section class="subscribe">
+            <div class="page-wrapper">
+              <div class="subscribe__img"></div>
+              <h3 class="subscribe__now">Subscribe now</h3>
+              <div class="subscribe__btn"><h5 class="h5--upper">Join Now</h5></div>
+              <h4 class="subscribe__name">Dean</h4>
+              <h4 class="subscribe__last-name">Hen<span class="colored__red">son</span></h4>
+              <h5 class="subscribe__album"><span class="uppercase">New Album</span><br />Available only for subscribers</h5>
+            </div>
+          </section>
+        </div>
       </section>
 
       <section id="search">
         <div class="container">
-          <h5 class="uppercase">Search</h5>
-          <form id="search-form"></form>
-          <div class="search-result"></div>
+          <div class="page-wrapper">
+            <h5 class="uppercase">Search</h5>
+            <form id="search-form"></form>
+            <div class="search-result"></div>
+          </div>
+          <section class="music">
+            <div class="container"></div>
+          </section>
         </div>
-        <section class="music">
-          <div class="container"></div>
-        </section>
       </section>
 
       <section id="discover">
         <div class="container">
-          <h5 class="uppercase">Discover</h5>
-          <a href="#">Give it a try</a>
-        </div>
+          <div class="page-wrapper">
+            <h5 class="uppercase">Discover</h5>
+            <a href="#">Give it a try</a>
+          </div>
 
-        <section class="music">
-          <div class="container"></div>
-        </section>
+          <section class="music">
+            <div class="container"></div>
+          </section>
+        </div>
       </section>
     </div>
 
     <footer>
-      <div class="container">
+      <div class="footer-wrapper">
         <p>All rights reserved</p>
       </div>
     </footer>
@@ -100,6 +105,7 @@
       <input id='search-form__title' type='text' />
       <label for='search-form__category'><p>Category</p></label>
       <select id='search-form__category'>
+        <option value='empty'></option>
         {{#each this}}
           <option value='{{this}}'>{{this}}</option>
         {{/each}}

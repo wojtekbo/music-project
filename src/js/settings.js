@@ -21,6 +21,7 @@ export const select = {
       form: {
         container: '#search-form',
         title: '#search-form__title',
+        category: '#search-form__category',
         submit: '#search-form__button',
       },
       result: '.search-result',

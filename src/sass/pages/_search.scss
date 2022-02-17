@@ -4,16 +4,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
     label {
       color: $color-light;
       margin: 0 10px 0 25px;
     }
+
     input,
     select {
       border-radius: 6px;
       padding: 0 6px;
       height: 40px;
     }
+
     button {
       font-size: 0.8rem;
       text-transform: uppercase;
@@ -27,6 +30,7 @@
       padding: 0 20px;
     }
   }
+
   .search-result {
     font-size: 1rem;
     color: $color-light;

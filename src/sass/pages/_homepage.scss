@@ -8,9 +8,10 @@
   background-image: url(../images/subscribe.jpg);
   background-size: cover;
   background-position: center center;
+
   .subscribe__now {
     position: absolute;
-    top: -60px;
+    top: -110px;
     left: 49.2%;
     margin-right: -50%;
     transform: translate(-50%, 0);
@@ -35,6 +36,7 @@
     border-radius: 10px;
     box-shadow: 0 0 118px 24px rgba(0, 0, 0, 0.11);
     padding: 43px 33px;
+
     h5 {
       margin-left: 3px;
     }
@@ -60,44 +62,180 @@
     line-height: 54.2px;
   }
 }
-@media screen and (max-width: 1300px) {
+
+// MEDIA
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .subscribe {
-    height: 800px;
+    height: 600px;
     width: 100%;
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    display: flex;
-    background-image: url(../images/subscribe.jpg);
-    background-size: cover;
-    background-position: center center;
+
     .subscribe__now {
-      position: absolute;
-      top: -36px;
+      top: -68px;
       left: 49.2%;
       margin-right: -50%;
-      transform: translate(-50%, 0);
+      font-size: 2.2rem;
+      letter-spacing: 1rem;
     }
 
     .subscribe__img {
+      display: none;
+    }
+
+    .subscribe__btn {
+      width: 40%;
       position: absolute;
+      top: 233px;
+      right: 10%;
+      border-radius: 10px;
+      padding: 20px 10px;
+
+      h5 {
+        margin-left: 3px;
+      }
+    }
+
+    .subscribe__name {
+      top: 30px;
+      left: 10%;
+    }
+
+    .subscribe__last-name {
+      top: 100px;
+      left: 10%;
+    }
+
+    .subscribe__album {
+      bottom: 90px;
+      right: 5%;
+      line-height: 36px;
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .subscribe {
+    height: 600px;
+    width: 100%;
+
+    .subscribe__now {
+      top: -72px;
+      left: 49.2%;
+      margin-right: -50%;
+      font-size: 2.8rem;
+      letter-spacing: 1.2rem;
+    }
+
+    .subscribe__img {
+      display: none;
+    }
+
+    .subscribe__btn {
+      position: absolute;
+      top: 233px;
+      left: 230px;
+      border-radius: 10px;
+      padding: 27px 21px;
+
+      h5 {
+        margin-left: 3px;
+      }
+    }
+
+    .subscribe__name {
+      top: 30px;
+      right: 278px;
+    }
+
+    .subscribe__last-name {
+      top: 100px;
+      right: 106px;
+    }
+
+    .subscribe__album {
+      bottom: 90px;
+      right: 14px;
+      line-height: 36px;
+    }
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  body {
+    background-color: rgb(226, 43, 43);
+  }
+  .subscribe {
+    height: 700px;
+    width: 100%;
+
+    .subscribe__now {
+      top: -78px;
+      left: 49.2%;
+      margin-right: -50%;
+      font-size: 3.4rem;
+    }
+
+    .subscribe__img {
       width: 325px;
       height: 404px;
-      right: 81px;
-      top: 137px;
-      background-image: url(../images/artist.jpg);
-      background-size: cover;
-      background-position: center center;
+      right: 61px;
+      top: 117px;
     }
 
     .subscribe__btn {
       position: absolute;
       top: 373px;
       left: 118px;
-      background-color: $color-detail;
       border-radius: 10px;
-      box-shadow: 0 0 118px 24px rgba(0, 0, 0, 0.11);
       padding: 27px 21px;
+
+      h5 {
+        margin-left: 3px;
+      }
+    }
+
+    .subscribe__name {
+      top: 130px;
+      right: 378px;
+    }
+
+    .subscribe__last-name {
+      top: 200px;
+      right: 206px;
+    }
+
+    .subscribe__album {
+      bottom: 90px;
+      right: 44px;
+      line-height: 36px;
+    }
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+  .subscribe {
+    height: 800px;
+    width: 100%;
+
+    .subscribe__now {
+      position: absolute;
+      top: -90px;
+      left: 49.2%;
+    }
+
+    .subscribe__img {
+      width: 325px;
+      height: 404px;
+      right: 81px;
+      top: 137px;
+    }
+
+    .subscribe__btn {
+      top: 373px;
+      left: 118px;
+      border-radius: 10px;
+      padding: 27px 21px;
+
       h5 {
         margin-left: 3px;
       }
@@ -112,7 +250,7 @@
     .subscribe__last-name {
       position: absolute;
       top: 370px;
-      right: 240px;
+      right: 226px;
     }
 
     .subscribe__album {
@@ -122,3 +260,5 @@
     }
   }
 }
+// @media only screen and (min-width: 1301px) {
+// }
